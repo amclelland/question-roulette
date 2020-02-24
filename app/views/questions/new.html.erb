@@ -1,0 +1,9 @@
+<h1>Add Question</h1>
+<p>
+  Currently there are <%= @unasked_questions_count %> questions waiting to be asked
+</p>
+
+<%= form_for Question.new do |f| %>
+  <%= f.text_area :text %>
+  <%= f.submit %>
+<% end %>
