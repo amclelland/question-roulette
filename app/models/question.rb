@@ -1,4 +1,6 @@
 class Question < ApplicationRecord
+  validates :text, length: { maximum: 50 }
+
   def self.todays_question
     where(posted_at: Date.today)
   end
