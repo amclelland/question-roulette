@@ -4,7 +4,7 @@ class QuestionPoster
   end
 
   def post_question_of_the_day
-    return if Date.today.is_weekend?
+    return if Date.today.on_weekend?
     return if random_unasked_question.blank?
 
     post_to_slack(random_unasked_question.text)
